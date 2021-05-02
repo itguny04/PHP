@@ -42,9 +42,13 @@
         </ol>
         
         <a href="create.php">create</a>
-        <?php
+        <?php 
             if(isset($_GET['id'])){
-                echo "<a href=\"./update.php?id={$_GET['id']}\">update</a>";
+                echo "<a href=\"./update.php?id={$_GET['id']}\">update</a> ";
+                echo "<form action=\"./delete_process.php\" method=\"POST\">";
+                    echo "<input name=\"delete_obj\" type=\"hidden\" value=\"{$_GET['id']}\">";
+                    echo "<input type=\"submit\" value=\"글 삭제\">";
+                echo "</form>";
             }
         ?>
 
