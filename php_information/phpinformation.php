@@ -1,5 +1,1 @@
-<?php
-    $img_file
-
-    phpinfo("./img/{}");
-?>
+<?php phpinfo()?>
